@@ -1,4 +1,4 @@
-Sorting Level 1 | Factory I/O + Siemens TIA Portal
+# Sorting Level 1 | Factory I/O + Siemens TIA Portal
 
 ![Sorting Level 1 project](photo)
 
@@ -43,19 +43,6 @@ Record the software versions, PLC model, and driver used for this project once c
 Confirm that the Factory I/O driver tags match the PLC tag table before running the simulation.
 
 ## System at a glance
-
-```mermaid
-flowchart LR
-    O([Part and scene events]) --> S
-    subgraph SIM[FACTORY I/O · SIMULATION]
-        S[Sorting scene, sensors, and actuators]
-    end
-    subgraph PLC[SIEMENS · TIA PORTAL]
-        L[Ladder logic and sorting decisions]
-    end
-    S -->|Sensor states| L
-    L -->|Actuator commands| S
-```
 
 Each PLC scan reads scene inputs, evaluates the sorting logic, and updates outputs. Factory I/O then applies those commands and reports the resulting sensor states.
 
@@ -108,3 +95,5 @@ Add the relevant network or block names and screenshots from TIA Portal here. In
 ## Safety note
 
 This is a simulation and learning exercise, not a validated production control design. Real equipment requires an appropriate risk assessment, guarding, safety circuits, and commissioning.
+
+
